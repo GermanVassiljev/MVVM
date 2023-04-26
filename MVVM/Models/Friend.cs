@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MVVM.Models
 {
-    internal class Friend
+     public class Friend
     {
         public string Name { get; set; }
         public string Email { get; set; }

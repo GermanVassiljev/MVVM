@@ -11,7 +11,7 @@ namespace MVVM.ViewModels
     public class FriendViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        //FriendsListViewModel lvm;
+        FriendsListViewModel lvm;
         public Friend Friend { get; private set; }
         public FriendViewModel()
         {
@@ -60,7 +60,7 @@ namespace MVVM.ViewModels
             {
                 if (Friend.Phone != value)
                 {
-                    Friend.Email = value;
+                    Friend.Phone = value;
                     OnPropertyChanged("Phone");
                 }
             }
@@ -77,9 +77,6 @@ namespace MVVM.ViewModels
         protected void OnPropertyChanged(string propName)
         {
             if (PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs(propName));
-            {
-
-            }
         }
 
     }
